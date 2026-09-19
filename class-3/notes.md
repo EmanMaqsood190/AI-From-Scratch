@@ -1,4 +1,4 @@
-# Class 3 — Backpropagation: How a Network Figures Out Who to Blame 🍪
+# Class 3 | Backpropagation: How a Network Figures Out Who to Blame 🍪
 
 > **Next Up from Class 2:** *"The tiny-wiggle trick was cute, but imagine having 10 million weights. 💀 We obviously can't wiggle every number one-by-one. So how does the network calculate all those gradients efficiently?"*
 >
@@ -54,14 +54,14 @@ Backpropagation is the shortcut that gets us out of this.
 
 Here's the trick, in one sentence:
 
-> **Instead of re-baking the whole batch for every dial, the Taste Tester just tells Machine 2 how wrong the cookie was — and Machine 2 passes that same information back to Machine 1. Nobody re-bakes anything.**
+> **Instead of re-baking the whole batch for every dial, the Taste Tester just tells Machine 2 how wrong the cookie was, and Machine 2 passes that same information back to Machine 1. Nobody re-bakes anything.**
 
 Think of it like a game of telephone, except played *backwards* and *on purpose*:
 
 ```mermaid
 flowchart RL
     T["😋 Taste Tester:<br/>'Too sweet by a lot!'"] --> M2["🔧 Machine 2:<br/>'Ok, MY dial caused this much of it.<br/>Here's what's left over for you, Machine 1.'"]
-    M2 --> M1["🔧 Machine 1:<br/>'Got it — I'll turn my dial<br/>using what Machine 2 passed back.'"]
+    M2 --> M1["🔧 Machine 1:<br/>'Got it, I'll turn my dial<br/>using what Machine 2 passed back.'"]
 ```
 
 Notice what did **not** happen: nobody baked a new batch of cookies. The Taste Tester's one verdict got reused by both machines, each one peeling off exactly its own share of the blame.
@@ -123,9 +123,9 @@ flowchart RL
     M2 -->|passes leftover blame back| M1["🔧 Machine 1:<br/>uses that leftover to fix<br/>ITS OWN dial"]
 ```
 
-**What Machine 2 does:** it takes the one number the Taste Tester gave it, and reuses that *same number* for two things — adjusting its own dial, **and** figuring out what to pass back to Machine 1. No re-baking.
+**What Machine 2 does:** it takes the one number the Taste Tester gave it, and reuses that *same number* for two things adjusting its own dial, **and** figuring out what to pass back to Machine 1. No re-baking.
 
-**What Machine 1 does:** it takes the leftover number Machine 2 handed it, and uses that to adjust its own dial. It never needed to know anything about the Taste Tester directly — the number that arrived already has everything it needs baked in (pun intended).
+**What Machine 1 does:** it takes the leftover number Machine 2 handed it, and uses that to adjust its own dial. It never needed to know anything about the Taste Tester directly the number that arrived already has everything it needs baked in (pun intended).
 
 **⭐ The core insight:** one verdict from the Taste Tester turns into fixes for *every single dial* in the factory, just by passing one number backward and reusing it at each stop. In a factory with a million machines, this same relay race still only takes one backward walk.
 
@@ -206,4 +206,4 @@ Same answers, every time — but the shortcut got there without a single extra r
 
 [#-next-up-class-4](#-next-up-class-4)
 
-*"Every dial now knows exactly which way to turn and by how much. So... let's actually turn them! Nudge every single dial a tiny step in the right direction, taste the cookie again, and repeat that hundreds of times until the factory is baking perfect cookies on its own. Welcome to Gradient Descent — where the learning actually happens. 🎯"*
+*"Every dial now knows exactly which way to turn and by how much. So... let's actually turn them! Nudge every single dial a tiny step in the right direction, taste the cookie again, and repeat that hundreds of times until the factory is baking perfect cookies on its own. Welcome to Gradient Descent, where the learning actually happens. 🎯"*
