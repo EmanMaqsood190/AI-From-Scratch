@@ -1,4 +1,4 @@
-# 📘 Class 4 | Activation Functions — The Gate Every Dial Must Pass Through 
+# 📘 Class 4 | Activation Functions | The Gate Every Dial Must Pass Through 
 
 ## Quick recap
 
@@ -45,7 +45,7 @@ This one small bend is what allows a network to learn curves and complex pattern
 
 ## Meet the three gates
 
-### 1. Sigmoid — the shy gate
+### 1. Sigmoid | the shy gate
 
 Turns any number into something between **0 and 1**. Like a percentage.
 
@@ -82,7 +82,7 @@ ReLU(z) = max(0, z)
 - Negative number → becomes 0
 - Positive number → stays exactly the same
 
-That's it. No squishing, no percentages. Sounds too simple to work — but it's the most-used gate in modern AI, and here's why.
+That's it. No squishing, no percentages. Sounds too simple to work, but it's the most-used gate in modern AI, and here's why.
 
 ---
 
@@ -98,7 +98,7 @@ In backprop, the blame signal travels backward and gets **multiplied** at every 
 = 0.00000095
 ```
 
-By the time the blame reaches the first station, it's almost zero. That station basically never learns. This is called the **vanishing gradient problem** — a big reason deep networks used to be hard to train.
+By the time the blame reaches the first station, it's almost zero. That station basically never learns. This is called the **vanishing gradient problem** ,a big reason deep networks used to be hard to train.
 
 **With ReLU** (slope is exactly 1 for positive numbers):
 
@@ -106,9 +106,9 @@ By the time the blame reaches the first station, it's almost zero. That station 
 1 × 1 × 1 × 1 × 1 × 1 × 1 × 1 × 1 × 1 = 1
 ```
 
-The blame arrives fully intact, no matter how deep the factory is. **This is the real reason ReLU became so popular** — it doesn't shrink the signal.
+The blame arrives fully intact, no matter how deep the factory is. **This is the real reason ReLU became so popular** ,it doesn't shrink the signal.
 
-**ReLU's one flaw:** if a station's output stays negative, its gate stays shut forever, and it stops learning completely — a "dead" station. The fix is **Leaky ReLU**, which leaves the gate cracked open just a tiny bit even for negative numbers.
+**ReLU's one flaw:** if a station's output stays negative, its gate stays shut forever, and it stops learning completely, a "dead" station. The fix is **Leaky ReLU**, which leaves the gate cracked open just a tiny bit even for negative numbers.
 
 ```
 Leaky ReLU(z) = max(0.01 × z, z)
@@ -170,7 +170,7 @@ ReLU:    flat at 0, then a straight line going up
 
 ## The one-line summary
 
-**Activation functions are gates that let a network bend instead of just staying a straight line — and ReLU wins because it lets the blame signal travel all the way back without shrinking to nothing.**
+**Activation functions are gates that let a network bend instead of just staying a straight line, and ReLU wins because it lets the blame signal travel all the way back without shrinking to nothing.**
 
 ---
 
