@@ -282,3 +282,6 @@ Instead, the network **learns the required weights through training**.
 - Repeating this process allows the network to learn XOR.
 
 ---
+# 🔜 Up Next — Class 6 | Neural Network Training
+
+In the next class, we will learn about **Epochs, Batch Size, and Learning Rate**.
