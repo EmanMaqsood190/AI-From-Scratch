@@ -1,4 +1,4 @@
-# 📘 Class 5 | Building a 2-Layer Neural Network — Solving XOR
+# 📘 Class 5 | Building a 2-Layer Neural Network | Solving XOR
 
 In the previous classes, we learned how a single neuron works, how to calculate loss, how backpropagation sends the error backward, how gradient descent updates weights, and why activation functions are needed.
 
