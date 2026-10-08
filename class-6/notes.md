@@ -11,7 +11,7 @@ Now in Class 6, we learn **how to train the network repeatedly so that it become
 
 Training means:
 
-> Repeatedly showing examples to the neural network, calculating its error, and adjusting its weights and biases to reduce that error.
+ Repeatedly showing examples to the neural network, calculating its error, and adjusting its weights and biases to reduce that error.
 
 The basic training process is:
 
