@@ -1,7 +1,7 @@
 # 📘 Class 6 | Neural Network Training
 
 ## 🔄 Quick Recall — Class 5
-In Class 5,we learned **how the neural network works**. we built a 2-layer neural network to solve the XOR problem. Since a single neuron cannot solve XOR because it is not linearly separable, we added a hidden layer between the input and output layers. We connected forward propagation, loss, backpropagation, gradients, and gradient descent to train the network and adjust its weights and biases so that it could learn the XOR pattern.
+In Class 5, we built a 2-layer neural network to solve the XOR problem. Since a single neuron cannot solve XOR because it is not linearly separable, we added a hidden layer between the input and output layers. We connected forward propagation, loss, backpropagation, gradients, and gradient descent to train the network and adjust its weights and biases so that it could learn the XOR pattern.
 
 # 🔹 1. What Is Neural Network Training?
 
@@ -33,7 +33,6 @@ Update Weights
 Repeat
 ```
 
-As training continues, the network tries to make its predictions closer to the correct answers.
 There are 3 important concepts:
 
 1. Epoch
@@ -72,15 +71,6 @@ So:
 1 Epoch = One complete pass through the training dataset
 ```
 
-### Example
-
-```text
-Epoch 1 → Complete dataset
-Epoch 2 → Complete dataset
-Epoch 3 → Complete dataset
-...
-Epoch 10 → Complete dataset
-```
 
 The network usually becomes better as it trains for more epochs, although too many epochs can sometimes cause **overfitting** on larger datasets.
 
@@ -90,7 +80,7 @@ The network usually becomes better as it trains for more epochs, although too ma
 
 A **batch** is a smaller group of training examples.
 
-The **batch size** tells us how many examples the network processes before performing a weight update.
+The **batch size** tells us how many examples the network processes.
 
 For example:
 
@@ -120,36 +110,6 @@ So:
 ```text
 Batch Size = Number of training examples processed in one batch
 ```
-
-### XOR Example
-
-Our XOR dataset has only 4 examples.
-
-If:
-
-```text
-Batch Size = 2
-```
-
-Then we could have:
-
-```text
-Batch 1:
-0, 0 → 0
-0, 1 → 1
-
-Batch 2:
-1, 0 → 1
-1, 1 → 0
-```
-
-After processing both batches:
-
-```text
-1 Epoch = Complete
-```
-
----
 
 # 🔹 4. What Is the Learning Rate?
 
