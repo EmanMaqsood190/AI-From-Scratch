@@ -225,8 +225,6 @@ If the network updates its weights after every batch, there will be:
 
 during the 5 epochs.
 
-The learning rate `0.01` controls the size of each update.
-
 ---
 
 # 🔹 6. Complete Neural Network Training Process
