@@ -72,8 +72,6 @@ So:
 ```
 
 
-The network usually becomes better as it trains for more epochs, although too many epochs can sometimes cause **overfitting** on larger datasets.
-
 ---
 
 # 🔹 3. What Is Batch size?
@@ -164,7 +162,7 @@ Small Updates
 Slow Learning
 ```
 
-A very small learning rate may require many training steps.
+
 
 ---
 
